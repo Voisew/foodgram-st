@@ -13,4 +13,4 @@ RUN mkdir -p /app/collected_static && \
 
 COPY . .
 
-CMD ["sh", "-c", "python manage.py migrate && python manage.py collectstatic --noinput && gunicorn --bind 0.0.0.0:8000 foodgram_backend.wsgi"]
+CMD ["sh", "-c", "python manage.py makemigrations && python manage.py migrate && python manage.py collectstatic --noinput && gunicorn --bind 0.0.0.0:8000 foodgram_backend.wsgi"]
