@@ -9,7 +9,7 @@ services:
     container_name: foodgram-back
     build: ./backend
     volumes:
-      - static_volume:/app/collected_static/
+      - static_volume:/app/static/
       - media_volume:/app/media/
     depends_on:
       - db
